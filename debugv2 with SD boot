@@ -1,0 +1,711 @@
+AXG:BL1:d1dbf2:a4926f;FEAT:F0DC31BC:2000;POC:F;EMMC:800;NAND:0;READ:0;0.0;0.0;CHK:0;
+sdio debug board detected
+TE: 136410
+
+BL2 Built : 10:38:43, Apr 14 2020. axg gf27ed33 - jenkins@walle02-sh
+
+set vcck to 1100 mv
+set vddee to 950 mv
+init panel power
+Board ID = 0
+CPU clk: 1200MHz
+DDR low power enabled
+DDR3 chl: Rank0 16bit @ 912MHz
+bist_test rank: 0 17 00 2f 2a 11 44 1b 00 37 26 0c 41 00 00 00 00 00 00 00 00 00 00 00 00 721   - PASS
+Rank0: 256MB-2T-13
+AddrBus test pass!
+NAND init
+Load FIP HDR from NAND, src: 0x0000c000, des: 0x01700000, size: 0x00004000, part: 0
+Load BL3x from NAND, src: 0x00010000, des: 0x01704000, size: 0x000b7c00, part: 0
+NOTICE:  BL31: v1.3(release):3edeb02
+NOTICE:  BL31: Built : 16:43:54, Apr 14 2020
+NOTICE:  BL31: AXG secure boot!
+NOTICE:  BL31: BL33 decompress pass
+OPS=0x23
+[Image: axg_v1.1.3494-9ec8345 2020-04-17 18:16:39 jenkins@walle02-sh]
+25 0c 23 00 fc 7e 94 ad 97 9e 5a 72 80 07 60 27
+bl30:axg ver: 9 mode: 0
+bl30:axg thermal0
+[0.015880 Inits done]
+secure task start!
+high task start!
+low task start!
+ERROR:   Error initializing runtime service opteed_fast
+
+
+U-Boot 2015.01 (Nov 19 2021 - 22:40:09), Build: jenkins-Antminer_S19j-Pro_AMLCtrl_release_tls-12
+
+DRAM:  256 MiB
+Relocation Offset is: 0eeaf000
+mmu cfg end: 0x20000000
+mmu cfg end: 0x20000000
+register usb cfg[0][1] = 000000000ff6cfc8
+aml_i2c_init_port init regs for 0
+NAND:  get_sys_clk_rate_mtd() 292, clock setting 200!
+bus cycle0: 6,timing: 7
+NAND device id: 2c da 90 95 6 0
+NAND device: Manufacturer ID: 0x2c, Chip ID: 0x2c (Micron A revision NAND 2Gib MT29F2G08-A)
+get_sys_clk_rate_mtd() 292, clock setting 250!
+m3_nand_adjust_timing() sys_clk_rate 250, bus_c 6, bus_t 7
+oob_fill_cnt =32 oob_size =64, bch_bytes =14
+ecc mode:6 ecc_page_num=2 eep_need_oobsize=16
+plane_num=1 writesize=0x800 ecc.size=0x200 bch_mode=1
+oob avail size 6
+Creating 1 MTD partitions on "A revision NAND 2Gib MT29F2G08-A":
+0x000000000000-0x000000200000 : "bootloader"
+A revision NAND 2Gib MT29F2G08-A initialized ok
+get_sys_clk_rate_mtd() 292, clock setting 200!
+bus cycle0: 6,timing: 7
+NAND device id: 2c da 90 95 6 0
+NAND device: Manufacturer ID: 0x2c, Chip ID: 0x2c (Micron A revision NAND 2Gib MT29F2G08-A)
+get_sys_clk_rate_mtd() 292, clock setting 250!
+m3_nand_adjust_timing() sys_clk_rate 250, bus_c 6, bus_t 7
+oob_fill_cnt =32 oob_size =64, bch_bytes =14
+ecc mode:6 ecc_page_num=2 eep_need_oobsize=16
+PLANE change!
+plane_num=1 writesize=0x800 ecc.size=0x200 bch_mode=1
+aml_nand_init :oobmul=1,oobfree.length=8,oob_size=64
+oob avail size 8
+nbbt=20
+nenv=24
+nkey=32
+ndtb=40
+nddr=44
+bbt_start=20 env_start=24 key_start=32 dtb_start=40 ddr_start=44
+nbbt: info size=0x800 max_scan_blk=24, start_blk=20
+nbbt : phy_blk_addr=20, ec=0, phy_page_addr=0, timestamp=1
+nbbt free list:
+blockN=21, ec=-1, dirty_flag=0
+blockN=22, ec=-1, dirty_flag=0
+blockN=23, ec=-1, dirty_flag=0
+aml_nand_scan_rsv_info 1134: page_num=1
+aml_nand_scan_rsv_info 1137
+nbbt valid addr: 280000
+aml_nand_bbt_check 1258 bbt is valid, reading.
+aml_nand_read_rsv_info:446,read nbbt info to 280000
+nenv: info size=0x10000 max_scan_blk=32, start_blk=24
+nenv : phy_blk_addr=25, ec=0, phy_page_addr=0, timestamp=6
+nenv free list:
+blockN=24, ec=-1, dirty_flag=0
+blockN=26, ec=-1, dirty_flag=0
+blockN=27, ec=-1, dirty_flag=0
+blockN=28, ec=-1, dirty_flag=0
+blockN=29, ec=-1, dirty_flag=0
+blockN=30, ec=-1, dirty_flag=0
+blockN=31, ec=-1, dirty_flag=0
+aml_nand_scan_rsv_info 1134: page_num=32
+aml_nand_scan_rsv_info 1137
+nenv valid addr: 330000
+nkey: info size=0x8000 max_scan_blk=40, start_blk=32
+nkey : phy_blk_addr=-1, ec=0, phy_page_addr=0, timestamp=0
+nkey free list:
+blockN=32, ec=-1, dirty_flag=0
+blockN=33, ec=-1, dirty_flag=0
+blockN=34, ec=-1, dirty_flag=0
+blockN=35, ec=-1, dirty_flag=0
+blockN=36, ec=-1, dirty_flag=0
+blockN=37, ec=-1, dirty_flag=0
+blockN=38, ec=-1, dirty_flag=0
+blockN=39, ec=-1, dirty_flag=0
+aml_nand_scan_rsv_info 1134: page_num=16
+nkey valid addr: fffffffffffe0000
+aml_nand_rsv_info_check_except_bbt 1228 NO nkey exist
+ndtb: info size=0x20000 max_scan_blk=44, start_blk=40
+ndtb : phy_blk_addr=41, ec=0, phy_page_addr=0, timestamp=2
+ndtb free list:
+blockN=40, ec=-1, dirty_flag=0
+blockN=42, ec=-1, dirty_flag=0
+blockN=43, ec=-1, dirty_flag=0
+aml_nand_scan_rsv_info 1134: page_num=64
+aml_nand_scan_rsv_info 1137
+ndtb valid addr: 520000
+nddr: info size=0x800 max_scan_blk=46, start_blk=44
+nddr : phy_blk_addr=-1, ec=0, phy_page_addr=0, timestamp=0
+nddr free list:
+blockN=44, ec=-1, dirty_flag=0
+blockN=45, ec=-1, dirty_flag=0
+aml_nand_scan_rsv_info 1134: page_num=1
+nddr valid addr: fffffffffffe0000
+aml_nand_rsv_info_check_except_bbt 1228 NO nddr exist
+tpl: off 8388608, size 8388608
+Creating 6 MTD partitions on "A revision NAND 2Gib MT29F2G08-A":
+0x000000800000-0x000001000000 : "tpl"
+0x000001000000-0x000001200000 : "misc"
+0x000001200000-0x000002200000 : "recovery"
+0x000002200000-0x000004200000 : "boot"
+0x000004200000-0x000004700000 : "config"
+0x000004700000-0x000010000000 : "nvdata"
+A revision NAND 2Gib MT29F2G08-A initialized ok
+MMC:   aml_priv->desc_buf = 0x000000000dead560
+aml_priv->desc_buf = 0x000000000deaf8a0
+SDIO Port B: 0, SDIO Port C: 1
+uboot env amlnf_env_read : ####
+aml_nand_read_rsv_info:446,read nenv info to 330000
+In:    serial
+Out:   serial
+Err:   serial
+aml log : internal sys error!
+reboot_mode=cold_boot
+[store]To run cmd[amlnf dtb_read 0x1000000 0x40000]
+sub cmd dtb
+new argv[1] dtb_read
+do_dtb_ops(): argc 4
+arg 0: amlnf
+arg 1: dtb_read
+arg 2: 0x1000000
+arg 3: 0x40000
+do_dtb_ops() read
+amlnf_dtb_read: ####
+warnning!!! amlnf_dtb_read dtd length too much
+aml_nand_read_rsv_info:446,read ndtb info to 520000
+do_dtb_ops(): 262144 bytes read : OK
+aml log : R2048 check pass!
+      Amlogic multi-DTB tool
+      GZIP format, decompress...
+      Multi DTB detected.
+      Multi DTB tool version: v2.
+      Support 2 DTBS.
+debug ddr size: 0x10000000
+checkhw board adc:0
+      Found DTB for "axg_s400_v03sbr"
+gpio: pin GPIOAO_7 (gpio 7) value is 1
+[MSG]usb start
+(Re)start USB...
+USB0:   USB3.0 XHCI init start
+Register 1000140 NbrPorts 1
+Starting the controller
+USB XHCI 1.00
+scanning bus 0 for devices... 2 USB Device(s) found
+       scanning usb for storage devices... init_part() 282: PART_TYPE_DOS
+1 Storage Device(s) found
+[fat]Filesize is 0x25aB[0M]
+[FAT_ERR]L1208,offset(0x0) + wantsz(0x6c40) > filesize(0x25a)
+ERR(../drivers/usb/gadget/v2_burning/v2_common/optimus_img_decoder.c)L104:want to read 27712, but 0
+[MSG]cfg[aml_sdc_burn.ini] not valid aml pkg, parse it as ini
+[MSG]ini sz 0x25aB
+[fat]Filesize is 0x25aB[0M]
+[fat]0x:leftSz 25a < BPS 1000, gotSz 25a
+
+=========sdc_burn_paras=====>>>
+[common]
+erase_bootloader = 1
+erase_flash      = 1
+reboot           = 0x1
+key_overwrite    = 0x0
+erase_ddr_para    = 0x0
+
+[burn_ex]
+package          = aml_upgrade_package_enc.img
+media            =
+
+[burn_parts]
+burn_num         = 0
+
+<<<<=====sdc_burn_paras======
+
+[fat]Filesize is 0x15ee8a8B[21M]
+[fat]0x:leftSz c40 < BPS 1000, gotSz 6c40
+[MSG]image version [0x00000002]
+[MSG]SecureEnabled, use meson1_ENC
+[fat]Seek 0x192300 from 0x6c40
+[MSG]itemSizeNotAligned 0xd00
+[MSG]align 4 mmc read...        [fat]0x:leftSz 720 < BPS 1000, gotSz 7420
+[MSG]Down(mem) part(dtb) sz(0x7420) fmt(normal)
+[MSG]Burn Start...
+[MSG]load dt.img to 0x0000000001000000, sz=0x7420
+[MSG]Burn complete
+[MSG]Exit before re-init
+command:        store  exit
+aml log : R2048 check pass!
+      Amlogic multi-DTB tool
+      GZIP format, decompress...
+      Multi DTB detected.
+      Multi DTB tool version: v2.
+      Support 2 DTBS.
+debug ddr size: 0x10000000
+checkhw board adc:0
+      Found DTB for "axg_s400_v03sbr"
+start dts,buffer=0000000001000000,dt_addr=0000000001010800
+co-phase 0x3, tx-dly 0, clock 400000
+co-phase 0x3, tx-dly 0, clock 400000
+co-phase 0x3, tx-dly 0, clock 400000
+emmc/sd response timeout, cmd8, cmd->cmdarg=0x1aa, status=0x3ff2800
+emmc/sd response timeout, cmd55, cmd->cmdarg=0x0, status=0x3ff2800
+emmc/sd response timeout, cmd1, cmd->cmdarg=0x40000000, status=0x3ff2800
+EMMC init failed
+get_sys_clk_rate_mtd() 292, clock setting 200!
+bus cycle0: 6,timing: 7
+get_sys_clk_rate_mtd() 292, clock setting 250!
+m3_nand_adjust_timing() sys_clk_rate 250, bus_c 6, bus_t 7
+XXXXXXX======enter NAND boot======XXXXXX
+
+get_sys_clk_rate_mtd() 292, clock setting 200!
+bus cycle0: 6,timing: 7
+get_sys_clk_rate_mtd() 292, clock setting 250!
+m3_nand_adjust_timing() sys_clk_rate 250, bus_c 6, bus_t 7
+      Amlogic multi-DTB tool
+      Multi DTB detected.
+      Multi DTB tool version: v2.
+      Support 2 DTBS.
+debug ddr size: 0x10000000
+checkhw board adc:0
+      Found DTB for "axg_s400_v03sbr"
+whole chip
+do_nand(): off 0, size 268435456
+Erasing at 0x0 --   0% complete.aml_nand_erase_cmd blk 0x14 is protected
+Erasing at 0x280000 --   1% complete.aml_nand_erase_cmd blk 0x15 is protected
+aml_nand_erase_cmd blk 0x16 is protected
+aml_nand_erase_cmd blk 0x17 is protected
+Erasing at 0xffe0000 -- 100% complete.
+OK
+[burn_parts]
+burn_num         = 3
+burn_part0       = _aml_dtb
+burn_part1       = boot
+burn_part2       = recovery
+
+
+[MSG]=====>To burn part [_aml_dtb]
+[MSG]itemSizeNotAligned 0xd00
+[MSG]Down(store) part(_aml_dtb) sz(0x7420) fmt(normal)
+[MSG]totalSlotNum = 0, nextWriteBackSlot 1
+[MSG]itemSizeNotAligned 0xd00, itemSizePreload 0xd00
+[fat]0x:leftSz 720 < BPS 1000, gotSz 6720
+[MSG]Burn Start...
+[MSG]cmd[store erase partition _aml_dtb]
+0x000000000000-0x000000200000 : "bootloader"
+0x000000800000-0x000001000000 : "tpl"
+0x000001000000-0x000001200000 : "misc"
+0x000001200000-0x000002200000 : "recovery"
+0x000002200000-0x000004200000 : "boot"
+0x000004200000-0x000004700000 : "config"
+0x000004700000-0x000010000000 : "nvdata"
+--- find_dev_and_part ---
+id = _aml_dtb
+[MSG]optimus_download_dtb_image:dataSzReceived=0x7420
+sub cmd dtb
+new argv[1] dtb_erase
+do_dtb_ops(): argc 2
+arg 0: amlnf
+arg 1: dtb_erase
+do_dtb_ops() erase
+amlnf_dtb_erase: ####
+erasing ndtb:
+erasing valid info block: 520000
+erasing free info block: 500000
+erasing free info block: 540000
+erasing free info block: 560000
+do_dtb_ops() erase Okay
+[store]To run cmd[amlnf dtb_write 0x00000000013ff300 0x40000]
+sub cmd dtb
+new argv[1] dtb_write
+do_dtb_ops(): argc 4
+arg 0: amlnf
+arg 1: dtb_write
+arg 2: 0x00000000013ff300
+arg 3: 0x40000
+do_dtb_ops() write
+amlnf_dtb_save: ####
+warnning!!! amlnf_dtb_save: length too much
+aml_nand_save_rsv_info:685, ndtb: valid=1, pages=64
+release_free_node 112: bitmap=ffffff
+release_free_node 125: bitmap=fbffff
+aml_nand_save_rsv_info:750,save info to 500000
+do_dtb_ops(): 262144 bytes write : OK
+[MSG]Burn complete
+[store]To run cmd[amlnf dtb_read 0x0000000001400000 0x40000]
+sub cmd dtb
+new argv[1] dtb_read
+do_dtb_ops(): argc 4
+arg 0: amlnf
+arg 1: dtb_read
+arg 2: 0x0000000001400000
+arg 3: 0x40000
+do_dtb_ops() read
+amlnf_dtb_read: ####
+warnning!!! amlnf_dtb_read dtd length too much
+aml_nand_read_rsv_info:446,read ndtb info to 500000
+do_dtb_ops(): 262144 bytes read : OK
+[MSG]VERIFY OK
+
+[MSG]=====>To burn part [boot]
+[fat]Seek 0x3295b0 from 0x199750
+[MSG]itemSizeNotAligned 0xa50
+[MSG]flash LOGIC partCap 0x400000000B
+[MSG]Down(store) part(boot) sz(0xc2c200) fmt(normal)
+[MSG]totalSlotNum = 0, nextWriteBackSlot 13
+[MSG]itemSizeNotAligned 0xa50, itemSizePreload 0xa50
+[fat]0x:leftSz 7b0 < BPS 1000, gotSz 2b7b0
+[MSG]Burn Start...
+[MSG]cmd[store erase partition boot]
+mtdparts_init() 848, already init
+--- find_dev_and_part ---
+id = boot
+found boot @ 4/7do_nand(): off 35651584, size 33554432
+Erasing at 0x41e0000 -- 100% complete.
+OK
+[burnup]Wr:Up sz 0xc2c200 to align 0x1000
+[MSG]Burn complete
+[MSG]Verify Start...
+[MSG]To verify part boot in fmt normal
+[burnup]Rd:Up sz 0x2c200 to align 0x1000
+[MSG]Verify End
+[MSG]VERIFY OK
+
+[MSG]=====>To burn part [recovery]
+[fat]Seek 0x1024678 from 0xf557e0
+[MSG]itemSizeNotAligned 0x988
+[MSG]flash LOGIC partCap 0x200000000B
+[MSG]Down(store) part(recovery) sz(0x5ca200) fmt(normal)
+[MSG]totalSlotNum = 0, nextWriteBackSlot 6
+[MSG]itemSizeNotAligned 0x988, itemSizePreload 0x988
+[fat]0x:leftSz 878 < BPS 1000, gotSz c9878
+[MSG]Burn Start...
+[MSG]cmd[store erase partition recovery]
+mtdparts_init() 848, already init
+--- find_dev_and_part ---
+id = recovery
+found recovery @ 3/7do_nand(): off 18874368, size 16777216
+Erasing at 0x21e0000 -- 100% complete.
+OK
+[burnup]Wr:Up sz 0x5ca200 to align 0x1000
+[MSG]Burn complete
+[MSG]Verify Start...
+[MSG]To verify part recovery in fmt normal
+[burnup]Rd:Up sz 0x1ca200 to align 0x1000
+[MSG]Verify End
+[MSG]VERIFY OK
+
+[MSG]=====>To burn part [bootloader]
+[MSG]itemSizeNotAligned 0x820
+[MSG]Down(store) part(bootloader) sz(0xc7e00) fmt(normal)
+[MSG]totalSlotNum = 0, nextWriteBackSlot 1
+[MSG]itemSizeNotAligned 0x820, itemSizePreload 0x820
+[fat]0x:leftSz 5e0 < BPS 1000, gotSz c75e0
+[MSG]Burn Start...
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 0
+do_rom_ops() erase
+Erasing at 0x20000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 0
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 1
+do_rom_ops() erase
+Erasing at 0x60000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 1
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 2
+do_rom_ops() erase
+Erasing at 0xa0000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 2
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 3
+do_rom_ops() erase
+Erasing at 0xe0000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 3
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 4
+do_rom_ops() erase
+Erasing at 0x120000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 4
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 5
+do_rom_ops() erase
+Erasing at 0x160000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 5
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 6
+do_rom_ops() erase
+Erasing at 0x1a0000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 6
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd rom
+new argv[1] rom_erase
+do_rom_ops(): argc 3
+arg 0: amlnf
+arg 1: rom_erase
+arg 2: 7
+do_rom_ops() erase
+Erasing at 0x1e0000 -- 100% complete.
+sub cmd bl2
+new argv[1] bl2_write
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_write
+arg 2: 0x13ff7e0
+arg 3: 7
+arg 4: 0xc000
+do_bl2_ops() write
+do_bl2_ops() 1
+cfg.d32 0xe25004
+ddrp_start_page = 0xb00 ddr_start_block = 0x2c
+bl: version 1, mode 1, start 0x1000
+page_per_blk = 0x40 bbt_pages = 0x1
+boot_num = 4 each_boot_pages = 1024
+sub cmd fip
+new argv[1] fip_erase
+do_fip_ops(): argc 3
+arg 0: amlnf
+arg 1: fip_erase
+arg 2: 0
+do_fip_ops() erase, base 2
+Erasing at 0x9e0000 -- 100% complete.
+sub cmd fip
+new argv[1] fip_write
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_write
+arg 2: 0x140b7e0
+arg 3: 0
+arg 4: 0xbbe00
+do_fip_ops() write
+cpy 0
+sub cmd fip
+new argv[1] fip_erase
+do_fip_ops(): argc 3
+arg 0: amlnf
+arg 1: fip_erase
+arg 2: 1
+do_fip_ops() erase, base 2
+Erasing at 0xbe0000 -- 100% complete.
+sub cmd fip
+new argv[1] fip_write
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_write
+arg 2: 0x140b7e0
+arg 3: 200000
+arg 4: 0xbbe00
+do_fip_ops() write
+cpy 0
+sub cmd fip
+new argv[1] fip_erase
+do_fip_ops(): argc 3
+arg 0: amlnf
+arg 1: fip_erase
+arg 2: 2
+do_fip_ops() erase, base 2
+Erasing at 0xde0000 -- 100% complete.
+sub cmd fip
+new argv[1] fip_write
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_write
+arg 2: 0x140b7e0
+arg 3: 400000
+arg 4: 0xbbe00
+do_fip_ops() write
+cpy 0
+sub cmd fip
+new argv[1] fip_erase
+do_fip_ops(): argc 3
+arg 0: amlnf
+arg 1: fip_erase
+arg 2: 3
+do_fip_ops() erase, base 2
+Erasing at 0xfe0000 -- 100% complete.
+sub cmd fip
+new argv[1] fip_write
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_write
+arg 2: 0x140b7e0
+arg 3: 600000
+arg 4: 0xbbe00
+do_fip_ops() write
+cpy 0
+[MSG]Burn complete
+sub cmd bl2
+new argv[1] bl2_read
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_read
+arg 2: 0x000000000dec7e50
+arg 3: 0
+arg 4: 0xc000
+do_bl2_ops() read
+ TODO: check fip info
+sub cmd bl2
+new argv[1] bl2_read
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_read
+arg 2: 0x000000000dec7e50
+arg 3: 1
+arg 4: 0xc000
+do_bl2_ops() read
+ TODO: check fip info
+sub cmd bl2
+new argv[1] bl2_read
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_read
+arg 2: 0x000000000dec7e50
+arg 3: 2
+arg 4: 0xc000
+do_bl2_ops() read
+ TODO: check fip info
+sub cmd bl2
+new argv[1] bl2_read
+do_bl2_ops(): argc 5
+arg 0: amlnf
+arg 1: bl2_read
+arg 2: 0x000000000dec7e50
+arg 3: 3
+arg 4: 0xc000
+do_bl2_ops() read
+ TODO: check fip info
+sub cmd fip
+new argv[1] fip_read
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_read
+arg 2: 0x000000000dec7e50
+arg 3: 0
+arg 4: 0xbbe00
+do_fip_ops() read
+sub cmd fip
+new argv[1] fip_read
+do_fip_ops(): argc 5
+arg 0: amlnf
+arg 1: fip_read
+arg 2: 0x000000000dec7e50
+arg 3: 200000
+arg 4: 0xbbe00
+do_fip_ops() read
+[MSG]VERIFY OK
+[MSG]Set upgrade_step to 1
+Saving Environment to aml-storage...
+uboot env amlnf_env_save : ####
+aml_nand_save_rsv_info:685, nenv: valid=1, pages=32
+release_free_node 112: bitmap=ffffff
+release_free_node 125: bitmap=fffff7
+aml_nand_save_rsv_info:750,save info to 300000
+[MSG]to close image
+[MSG]======sdc burn SUCCESS.
+gpio: pin GPIOA_16 (gpio 56) value is 1
